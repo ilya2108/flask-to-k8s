@@ -10,7 +10,7 @@ env:
   GKE_ZONE: europe-west3
   DEPLOYMENT_NAME: api-deployment
   IMAGE: fastapi-sample
-  REGISTRY: fastapi-sample-repository/${{GKE_PROJECT}}/fastapi-sample-repository
+  REGISTRY: fastapi-sample-repository/double-rigging-415508/fastapi-sample-repository
 
 jobs:
   build-and-deploy:
