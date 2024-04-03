@@ -10,7 +10,7 @@ env:
   GKE_ZONE: europe-west3
   DEPLOYMENT_NAME: api-deployment
   IMAGE: fastapi-sample
-  REGISTRY: ryabuily/fastapi-sample
+  REGISTRY: docker.io/ryabuily/fastapi-sample
 
 jobs:
   build-and-deploy:
