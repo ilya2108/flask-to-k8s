@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: api
-        image: gcr.io/your-project-id/your-docker-image:latest
+        image: ryabuily/fastapi-sample:latest
         ports:
         - containerPort: 8080
         env:
