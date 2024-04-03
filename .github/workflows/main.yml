@@ -10,7 +10,7 @@ env:
   GKE_ZONE: europe-west3
   DEPLOYMENT_NAME: api-deployment
   IMAGE: fastapi-sample
-  REGISTRY: fastapi-sample-repository/double-rigging-415508/fastapi-sample-repository
+  REGISTRY: ryabuily/fastapi-sample
 
 jobs:
   build-and-deploy:
@@ -53,4 +53,4 @@ jobs:
 
     - name: Deploy to GKE
       run: |
-        kubectl set image deployment/${{ env.DEPLOYMENT_NAME }} ${{ env.DEPLOYMENT_NAME }}=${{ env.REGISTRY }}/${{ env.GKE_PROJECT }}/${{ env.IMAGE }}:${{ github.sha }}
+        kubectl set image deployment/${{ env.DEPLOYMENT_NAME }} ${{ env.DEPLOYMENT_NAME }}=${{ env.REGISTRY }}:${{ github.sha }}
