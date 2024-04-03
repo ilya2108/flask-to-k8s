@@ -47,6 +47,10 @@ jobs:
         docker push ${{ secrets.DOCKER_HUB_USERNAME }}/${{ env.IMAGE }}:${{ github.sha }}
         docker push ${{ secrets.DOCKER_HUB_USERNAME }}/${{ env.IMAGE }}:latest
 
+    - name: Install gke-gcloud-auth-plugin
+      run: |
+        sudo apt-get install google-cloud-sdk-gke-gcloud-auth-plugin
+    
     - name: Get the GKE credentials
       run: |
         gcloud container clusters get-credentials "${{ env.GKE_CLUSTER }}" --zone "${{ env.GKE_ZONE }}"
